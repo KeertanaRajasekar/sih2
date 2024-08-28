@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assured Contract Farming System</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>Assured Contract Farming System</h1>
+        <nav>
+            <ul>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contract">Create Contract</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <form>
+        <section id="register">
+            <h2>User Registration</h2>
+            <form id="registration-form">
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type">
+                    <option value="farmer">Farmer</option>
+                    <option value="buyer">Buyer</option>
+                </select><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required> <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required> <br>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="contract">
+            <h2 style="margin-left: 33%;">Create Contract</h2>
+            <form id="contract-form">
+                <label for="farmer-name">Farmer Name:</label>
+                <input type="text" id="farmer-name" name="farmer-name" required> <br>
+                <label for="buyer-name">Buyer Name:</label>
+                <input type="text" id="buyer-name" name="buyer-name" required> <br>
+                <label for="crop">Crop:</label>
+                <input type="text" id="crop" name="crop" required> <br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" required> <br>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" required> <br>
+                <button type="submit">Create Contract</button>
+            </form>
+            
+        </section>
+
+        <section id="dashboard">
+            <h2 style="margin-left: 33%">Dashboard</h2>
+            <div id="contracts-list">
+                <!-- Contract details will be populated here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Assured Contract Farming System. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js">
+        document.addEventListener('DOMContentLoaded', () => {
+    const registrationForm = document.getElementById('registration-form');
+    const contractForm = document.getElementById('contract-form');
+    const contractsList = document.getElementById('contracts-list');
+
+    registrationForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simulate registration
+        alert('Registration successful!');
+    });
+
+    contractForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Simulate contract creation
+        const formData = new FormData(contractForm);
+        const contractData = {
+            farmer: formData.get('farmer-name'),
+            buyer: formData.get('buyer-name'),
+            crop: formData.get('crop'),
+            quantity: formData.get('quantity'),
+            price: formData.get('price'),
+        };
+
+        // Display the contract in the dashboard
+        const contractElement = document.createElement('div');
+        contractElement.innerHTML = `
+            <h3>Contract</h3>
+            <p><strong>Farmer:</strong> ${contractData.farmer}</p>
+            <p><strong>Buyer:</strong> ${contractData.buyer}</p>
+            <p><strong>Crop:</strong> ${contractData.crop}</p>
+            <p><strong>Quantity:</strong> ${contractData.quantity}</p>
+            <p><strong>Price:</strong> $${contractData.price}</p>
+        `;
+        contractsList.appendChild(contractElement);
+
+        alert('Contract created successfully!');
+    });
+});
+
+    </script>
+</body>
+</html>
