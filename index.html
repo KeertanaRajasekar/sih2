@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assured Contract Farming System</title>
+    <title>FarmLink</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-    font-family: Arial, sans-serif;
+  /* Basic reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #010903;
 }
 
 header {
-    background-color: #4CAF50;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    padding: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
     text-align: center;
+    z-index: 1;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 main {
     padding: 2rem;
+    background-color: #f4f4f4;
+    min-height: 100vh;
 }
 
 section {
@@ -43,57 +72,95 @@ section {
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
-form label {
-    display: block;
-    margin: 0.5rem 0 0.2rem;
-}
-
-form input, form select {
-    width: 100%;
+input[type="text"], input[type="password"], input[type="number"], select {
+    margin: 0.5rem 0;
     padding: 0.5rem;
-    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-form button {
-    background-color: #4CAF50;
+button {
+    background-color: #0b6a13;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #50a050;
 }
 
 footer {
-    background-color: #333;
+    background-color: #368907;
     color: white;
     text-align: center;
     padding: 1rem;
 }
-
+   
     </style>
 
 
 </head>
 <body>
     <header>
-        <h1>Assured Contract Farming System</h1>
+        <h1>FarmLink</h1>
         <nav>
             <ul>
-                <li><a href="#register">Register</a></li>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About Us">About Us</a></li>
+                <li><a href="#Our Services">Our Services</a></li>
+                <li><a href="#register">Registeration</a></li>
+                
                 <li><a href="#contract">Create Contract</a></li>
-                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#Payment">Payment</a></li>
+                <li><a href="#Contact Us">Contact Us</a></li>
+                
             </ul>
         </nav>
-    </header>
+          <img src="img/agri.jpeg" height="70%" width="110%" />
+            </header>
     
     <main>
+        <form>
+            <section id="Home">
+                <h2>Welcome to FarmLink</h2>
+                <p>Welcome to FarmLink, where we bridge the gap between farmers and buyers to ensure stable market access and secure transactions. Our platform is designed to provide farmers with a reliable market for their produce, mitigating the uncertainties of fluctuating incomes.</p>
+                <p>At FarmLink, we understand the challenges faced by farmers due to unpredictable market conditions. Our mission is to offer a solution that ensures consistent income and reliable market access through assured contract farming agreements.</p>
+                <p>Join us in transforming the agricultural sector by connecting with buyers who are committed to transparent and secure farming contracts. Explore our services and see how we can support your farming business today.</p>
+                <a href="#About Us" class="button">Learn More</a>
+            </section>
+            
+        </form>
+        <form>
+            <section id="About Us">
+                <h2>About Us</h2>
+                <p>FarmLink was created with the vision of transforming the agricultural landscape by providing farmers with a stable and secure market for their produce. Our platform is dedicated to facilitating assured contract farming agreements that benefit both farmers and buyers.</p>
+                <p><strong>Our Mission:</strong> To empower farmers by connecting them with buyers through transparent and reliable contract farming agreements. We aim to reduce market risks and ensure fair prices for agricultural produce.</p>
+                <p><strong>Our Values:</strong> Transparency, trust, and reliability are at the core of our operations. We are committed to providing a platform that fosters clear communication, secure transactions, and timely payments.</p>
+                <p>Our team consists of agricultural experts, tech enthusiasts, and dedicated professionals who are passionate about making a positive impact in the farming industry.</p>
+            </section>
+            
+        </form>
+        <form>
+            <section id="Our Services">
+                <h2>Our Services</h2>
+                <ul>
+                    <li><strong>Assured Contract Agreements:</strong> We facilitate secure and reliable contract agreements between farmers and buyers. Our platform ensures that farmers have guaranteed buyers for their produce, providing them with income stability.</li>
+                    <li><strong>Transparent Communication:</strong> Our platform offers tools for clear and open communication between farmers and buyers. This transparency helps in negotiating terms and managing contracts effectively.</li>
+                    <li><strong>Secure Payment Processing:</strong> We provide secure payment options to ensure that transactions are processed smoothly and on time. Our payment system protects both parties and ensures that funds are transferred securely.</li>
+                    <li><strong>Price Negotiation Tools:</strong> Our platform includes features for negotiating prices, allowing farmers and buyers to reach mutually beneficial agreements. This flexibility helps in accommodating market fluctuations and individual needs.</li>
+                    <li><strong>Contract Management:</strong> Manage your contracts efficiently with our user-friendly tools. Track contract details, deadlines, and performance metrics to ensure that all parties adhere to the agreed terms.</li>
+                </ul>
+                <p>Our comprehensive services are designed to support the entire contract farming process, making it easier for farmers and buyers to collaborate and succeed together.</p>
+            </section>
+            
+        </form>
         <form>
         <section id="register">
             <h2>User Registration</h2>
@@ -103,8 +170,8 @@ footer {
                     <option value="farmer">Farmer</option>
                     <option value="buyer">Buyer</option>
                 </select><br>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required> <br>
+                <label for="Email">Email:</label>
+                <input type="text" id="Email" name="Email" required> <br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required> <br>
                 <button type="submit">Register</button>
@@ -112,7 +179,7 @@ footer {
         </section>
 
         <section id="contract">
-            <h2 style="margin-left: 33%;">Create Contract</h2>
+            <h2>Create Contract</h2>
             <form id="contract-form">
                 <label for="farmer-name">Farmer Name:</label>
                 <input type="text" id="farmer-name" name="farmer-name" required> <br>
@@ -128,13 +195,114 @@ footer {
             </form>
             
         </section>
+        
+        <section>
+            <h2>Payment</h2>
+            
+<form action="/process-payment" method="POST">
+    <label for="contractId">Contract ID:</label>
+    <input type="text" id="contractId" name="contractId">
 
-        <section id="dashboard">
-            <h2 style="margin-left: 33%">Dashboard</h2>
-            <div id="contracts-list">
-                <!-- Contract details will be populated here -->
-            </div>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount">
+
+    <label for="paymentMethod">Payment Method:</label>
+    <select id="paymentMethod" name="paymentMethod">
+        <option value="creditCard">Credit Card</option>
+        <option value="bankTransfer">Bank Transfer</option>
+    </select>
+
+    <input type="submit" value="Pay">
+</form>
         </section>
+<section id="Contact Us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feedback, or need support, please don't hesitate to reach out to us. We are here to assist you with any inquiries regarding our platform and services.</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@farmlink.com">support@farmlink.com</a></li>
+        <li><strong>Phone:</strong> +1 (800) 123-4567</li>
+        <li><strong>Address:</strong> 123 FarmLink Road, Suite 100, AgriCity, AG 12345, USA</li>
+        <li><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</li>
+    </ul>
+    <p>For support and inquiries, please use the contact form below:</p>
+    <form action="mailto:support@farmlink.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+</section>
+<section id="Terms and Conditions">
+    <h2>Terms and Conditions</h2>
+    <p>**Effective Date:** [Insert Date]</p>
+
+    <p>Welcome to FarmLink! By accessing or using our platform, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using our services.</p>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By using FarmLink, you agree to these Terms and Conditions and our Privacy Policy. If you do not agree to these terms, you should not use our platform.</p>
+
+    <h3>2. Definitions</h3>
+    <p>
+        - **"Platform"** refers to the FarmLink website and any associated services, tools, and resources provided.<br>
+        - **"Users"** refers to individuals or entities that access or use the Platform, including farmers, buyers, and any other registered parties.<br>
+        - **"Contracts"** refers to agreements facilitated through our platform between farmers and buyers regarding the sale and purchase of agricultural produce.
+    </p>
+
+    <h3>3. User Responsibilities</h3>
+    <p>
+        - **Eligibility:** You must be at least 18 years old to use our platform.<br>
+        - **Account Information:** You are responsible for maintaining the confidentiality of your account information, including your username and password. Notify us immediately if you suspect any unauthorized use of your account.<br>
+        - **Accuracy:** Ensure that all information provided to FarmLink is accurate and up-to-date. You are responsible for any inaccuracies or misinformation.
+    </p>
+
+    <h3>4. Contract Farming Agreements</h3>
+    <p>
+        - **Creation and Management:** Contracts created through our platform are legally binding agreements between farmers and buyers. You agree to comply with the terms of these contracts.<br>
+        - **Dispute Resolution:** Any disputes arising from contracts should be addressed directly between the parties involved. FarmLink is not responsible for resolving disputes or enforcing contract terms.
+    </p>
+
+    <h3>5. Payment and Fees</h3>
+    <p>
+        - **Payment Processing:** All transactions processed through our platform are handled securely. We may charge fees for certain services, and these fees will be disclosed prior to payment.<br>
+        - **Refunds:** Refunds, if applicable, will be handled according to our Refund Policy. Any disputes regarding payments should be reported to us promptly.
+    </p>
+
+    <h3>6. Platform Use</h3>
+    <p>
+        - **Permitted Use:** You agree to use our platform only for lawful purposes and in accordance with these Terms. You may not engage in any activity that disrupts or interferes with our services.<br>
+        - **Prohibited Activities:** The following activities are prohibited:<br>
+            - Using the platform for illegal or fraudulent purposes.<br>
+            - Attempting to gain unauthorized access to any part of the platform or other users' accounts.<br>
+            - Harassing, abusing, or threatening other users.
+    </p>
+
+    <h3>7. Intellectual Property</h3>
+    <p>
+        - **Ownership:** All content, trademarks, and other intellectual property on the platform are owned by FarmLink or its licensors. You may not use, copy, or distribute any content without our prior written consent.
+    </p>
+
+    <h3>8. Privacy and Data Protection</h3>
+    <p>
+        - **Privacy Policy:** Your use of the platform is governed by our Privacy Policy, which outlines how we collect, use, and protect your personal information. By using the platform, you consent to our Privacy Policy.
+    </p>
+
+    <h3>9. Limitation of Liability</h3>
+    <p>
+        - **Disclaimer:** The platform is provided "as is" and "as available." We make no warranties or representations regarding the accuracy, reliability, or completeness of the platform.<br>
+        - **Liability:** FarmLink is not liable for any indirect, incidental, special, or consequential damages arising from your use of the platform or any contracts made through the platform.
+    </p>
+
+    <h3>10. Changes to Terms</h3>
+    <p>We may update these Terms and Conditions from time to time. Any changes will be posted on our platform, and the updated terms will take effect immediately upon posting. Your continued use of the platform after changes are made constitutes acceptance of the revised terms.</p>
+
+    <h3>11. Termination</h3>
+    <p>We reserve the right to terminate or suspend your access to the platform at our discretion if we believe you have violated these Terms and Conditions. Upon termination, your rights to use the platform will cease immediately.</p
+
     </main>
 
     <footer>
